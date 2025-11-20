@@ -14,7 +14,7 @@ import dev.frozenmilk.dairy.mercurial.continuations.Closure;
 import dev.frozenmilk.dairy.mercurial.continuations.Continuations;
 
 public class Closures {
-    {
+    static {
         // Almost all pre-built Closures come in the `Continuations` namespace in Mercurial
         // This means you can call them all like this:
         Closure a = Continuations.exec(() -> {
@@ -33,7 +33,7 @@ public class Closures {
         exec(() -> {
             // motor.setPower(1)
             // ,,,
-            // val power = pid.calculate(target, current)
+            // double power = pid.calculate(target, current);
             // ,,,
         });
 

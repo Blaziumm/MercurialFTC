@@ -6,7 +6,7 @@ This 'beginners' package aims to introduce:
 
 - Control flow, regardless of if you've used Command Based
 - Mercurial's basic concepts
-- MercurialOpMode
+- Mercurial's alternative to OpModes, known as Programs
 - Simple TeleOp and Auto
 
 ## Control Flow

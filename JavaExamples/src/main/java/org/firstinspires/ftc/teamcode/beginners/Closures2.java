@@ -17,7 +17,7 @@ import dev.frozenmilk.dairy.mercurial.continuations.registers.ValRegister;
 import dev.frozenmilk.dairy.mercurial.continuations.registers.VarRegister;
 
 public class Closures2 {
-    {
+    static {
         // we haven't yet looked at more advanced control flow techniques
 
         // the jump scope creates an escapable area

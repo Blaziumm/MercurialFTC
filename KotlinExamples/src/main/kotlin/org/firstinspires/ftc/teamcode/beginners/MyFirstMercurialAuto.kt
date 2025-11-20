@@ -1,11 +1,8 @@
 package org.firstinspires.ftc.teamcode.beginners
 
-import com.qualcomm.robotcore.eventloop.opmode.Autonomous
-import dev.frozenmilk.dairy.mercurial.ftc.MercurialOpMode
+import dev.frozenmilk.dairy.mercurial.ftc.Mercurial
 
-@Autonomous
-class MyFirstMercurialAuto(context: Context) : MercurialOpMode(context) {
-    init {
-        TODO()
-    }
+@Suppress("UNUSED")
+val myFirstMercurialAuto = Mercurial.autonomous {
+    TODO()
 }

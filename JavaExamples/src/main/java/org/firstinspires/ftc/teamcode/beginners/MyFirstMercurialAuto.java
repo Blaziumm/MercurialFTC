@@ -1,16 +1,10 @@
 package org.firstinspires.ftc.teamcode.beginners;
 
-import com.qualcomm.robotcore.eventloop.opmode.Autonomous;
+import dev.frozenmilk.dairy.mercurial.ftc.Mercurial;
 
-import org.jetbrains.annotations.NotNull;
-
-import dev.frozenmilk.dairy.mercurial.ftc.MercurialOpMode;
-
-@Autonomous
-public class MyFirstMercurialAuto extends MercurialOpMode {
-    public MyFirstMercurialAuto(@NotNull Context context) {
-        super(context);
-
+@SuppressWarnings("unused")
+public class MyFirstMercurialAuto {
+    public static final Mercurial.RegisterableProgram myFirstMercurialAuto = Mercurial.autonomous(ctx -> {
         // TODO
-    }
+    });
 }

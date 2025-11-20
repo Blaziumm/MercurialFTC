@@ -13,8 +13,8 @@ import dev.frozenmilk.dairy.mercurial.continuations.registers.ValRegister;
 import dev.frozenmilk.dairy.mercurial.continuations.registers.VarRegister;
 
 public class Registers {
-    int globalCount = 0;
-    {
+    static int globalCount = 0;
+    static {
         // so far, our Continuations have been pretty boring
 
         // we can get way more interesting with `scope`
@@ -135,7 +135,7 @@ public class Registers {
     }
 
     // note that we didn't use scope here
-    Closure increaseCount(VarRegister<Integer> count) {
+    static Closure increaseCount(VarRegister<Integer> count) {
         return exec(() -> count.set(count.get() + 1));
     }
 }
