@@ -3,6 +3,7 @@ package org.firstinspires.ftc.teamcode.beginners
 import com.qualcomm.robotcore.hardware.DcMotorEx
 import com.qualcomm.robotcore.hardware.DcMotorSimple
 import dev.frozenmilk.dairy.mercurial.continuations.Continuations.exec
+import dev.frozenmilk.dairy.mercurial.continuations.Continuations.loop
 import dev.frozenmilk.dairy.mercurial.continuations.Continuations.sequence
 import dev.frozenmilk.dairy.mercurial.continuations.Continuations.wait
 import dev.frozenmilk.dairy.mercurial.ftc.Mercurial
@@ -26,7 +27,7 @@ val myFirstMercurialTeleOp = Mercurial.teleop {
             // we'll start this process now,
             // but it will wait until we press play to actually start running
             wait { inLoop },
-            exec {
+            loop(exec {
                 val drive = -gamepad1.left_stick_y.toDouble()
                 val turn = gamepad1.right_stick_x.toDouble()
 
@@ -35,7 +36,7 @@ val myFirstMercurialTeleOp = Mercurial.teleop {
                 bl.power = (drive + turn) * throttle
                 br.power = (drive - turn) * throttle
                 fr.power = (drive - turn) * throttle
-            }
+            })
         )
     )
 

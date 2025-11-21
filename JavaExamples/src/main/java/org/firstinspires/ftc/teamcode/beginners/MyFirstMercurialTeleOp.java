@@ -1,6 +1,7 @@
 package org.firstinspires.ftc.teamcode.beginners;
 
 import static dev.frozenmilk.dairy.mercurial.continuations.Continuations.exec;
+import static dev.frozenmilk.dairy.mercurial.continuations.Continuations.loop;
 import static dev.frozenmilk.dairy.mercurial.continuations.Continuations.sequence;
 import static dev.frozenmilk.dairy.mercurial.continuations.Continuations.waitUntil;
 
@@ -33,15 +34,15 @@ public class MyFirstMercurialTeleOp {
                         // we'll start this process now,
                         // but it will wait until we press play to actually start running
                         waitUntil(ctx::inLoop),
-                        exec(() -> {
+                        loop(exec(() -> {
                             double drive = -ctx.gamepad1().left_stick_y;
                             double turn = ctx.gamepad1().right_stick_x;
-                            
+
                             fl.setPower((drive + turn) * state.throttle);
                             bl.setPower((drive + turn) * state.throttle);
                             br.setPower((drive - turn) * state.throttle);
                             fr.setPower((drive - turn) * state.throttle);
-                        })
+                        }))
                 )
         );
         
